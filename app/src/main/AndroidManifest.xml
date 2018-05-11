@@ -20,14 +20,9 @@
         android:roundIcon="@mipmap/ic_football"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity"/>
-
+        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.StadiumActivity" />
-        <activity android:name=".activities.ChampionshipLeague" />
         <activity android:name=".activities.Score" />
-        <activity android:name=".activities.PremierLeague" />
-        <activity android:name=".activities.LeagueOne" />
-        <activity android:name=".activities.LeagueTwo" />
         <activity android:name=".activities.InfoActivity" />
         <activity android:name=".activities.HelpActivity" />
         <!--
@@ -50,8 +45,12 @@
 
         <service
             android:name=".classpack.NotificationService"
+<<<<<<< HEAD
             android:exported="false">
         </service>
+=======
+            android:exported="false" />
+>>>>>>> tests
 
         <receiver android:name=".classpack.BootReceiver">
             <intent-filter>
@@ -67,6 +66,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
 
         <provider
@@ -78,6 +78,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
         </provider>
+=======
+        <activity android:name=".activities.LeagueActivity"></activity>
+>>>>>>> tests
     </application>
 
 </manifest>
