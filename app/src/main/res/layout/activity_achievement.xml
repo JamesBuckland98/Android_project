@@ -9,26 +9,25 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Achievements"
-            android:background="?attr/colorPrimary" />
+            android:background="?attr/colorPrimary"
+            app:title="Achievements" />
 
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.ListViewCompat
         android:id="@+id/achievementList"
         android:layout_width="match_parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_height="wrap_content" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
 
 
 </android.support.v7.widget.LinearLayoutCompat>

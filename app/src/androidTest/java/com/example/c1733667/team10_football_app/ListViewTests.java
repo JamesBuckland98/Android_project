@@ -62,10 +62,6 @@ public class ListViewTests {
             = new ActivityTestRule<HelpActivity>(HelpActivity.class);
     private HelpActivity helpActivity = null;
 
-    public ActivityTestRule<PremierLeague> premierLeagueActivityTestRule
-            = new ActivityTestRule<PremierLeague>(PremierLeague.class);
-    private PremierLeague premierLeague = null;
-
     public ActivityTestRule<InfoActivity> infoActivityActivityTestRule
             = new ActivityTestRule<InfoActivity>(InfoActivity.class);
     private InfoActivity infoActivity = null;
@@ -78,59 +74,8 @@ public class ListViewTests {
         score = scoreActivityTestRule.getActivity();
         achievement = achievementActivityTestRule.getActivity();
         helpActivity = helpActivityActivityTestRule.getActivity();
-        premierLeague = premierLeagueActivityTestRule.getActivity();
         infoActivity = infoActivityActivityTestRule.getActivity();
 
-    }
-
-    @Test
-    public void StadiumListviewPemierLeagueCheck() {
-        Intents.init();
-        onView(withId(R.id.btnStadium)).perform(click());
-
-        DataInteraction a = onData(anything())
-                .inAdapterView(withId(R.id.list_view))
-                .atPosition(0);
-        a.perform(click());
-
-        intended(hasComponent(PremierLeague.class.getName()));
-        Intents.release();
-    }
-
-    @Test
-    public void StadiumListViewChampionLeagueCheck() {
-        Intents.init();
-        onView(withId(R.id.btnStadium)).perform(click());
-        DataInteraction b = onData(anything())
-                .inAdapterView(withId(R.id.list_view))
-                .atPosition(1);
-        b.perform(click());
-        intended(hasComponent(ChampionshipLeague.class.getName()));
-        Intents.release();
-    }
-
-    @Test
-    public void StadiumListViewLeaugeOneCheck() {
-        Intents.init();
-        onView(withId(R.id.btnStadium)).perform(click());
-        DataInteraction c = onData(anything())
-                .inAdapterView(withId(R.id.list_view))
-                .atPosition(2);
-        c.perform(click());
-        intended(hasComponent(LeagueOne.class.getName()));
-        Intents.release();
-    }
-
-    @Test
-    public void StadiumListViewLeagueTwo() {
-        Intents.init();
-        onView(withId(R.id.btnStadium)).perform(click());
-        DataInteraction d = onData(anything())
-                .inAdapterView(withId(R.id.list_view))
-                .atPosition(3);
-        d.perform(click());
-        intended(hasComponent(LeagueTwo.class.getName()));
-        Intents.release();
     }
 
     @Test

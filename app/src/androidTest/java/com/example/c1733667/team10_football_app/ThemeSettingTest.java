@@ -57,10 +57,6 @@ public class ThemeSettingTest {
             = new ActivityTestRule<HelpActivity>(HelpActivity.class);
     private HelpActivity helpActivity = null;
 
-    public ActivityTestRule<PremierLeague> premierLeagueActivityTestRule
-            = new ActivityTestRule<PremierLeague>(PremierLeague.class);
-    private PremierLeague premierLeague = null;
-
     public ActivityTestRule<InfoActivity> infoActivityActivityTestRule
             = new ActivityTestRule<InfoActivity>(InfoActivity.class);
     private InfoActivity infoActivity = null;
@@ -73,7 +69,6 @@ public class ThemeSettingTest {
         score = scoreActivityTestRule.getActivity();
         achievement = achievementActivityTestRule.getActivity();
         helpActivity = helpActivityActivityTestRule.getActivity();
-        premierLeague = premierLeagueActivityTestRule.getActivity();
         infoActivity = infoActivityActivityTestRule.getActivity();
     }
 

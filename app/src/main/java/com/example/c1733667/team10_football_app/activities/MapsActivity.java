@@ -8,8 +8,10 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -177,6 +179,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.FROYO)
         public void saveBitmap(Bitmap bitmap) {
             imagePath = new File(this.getExternalFilesDir(null) + "/screenshot.png");
             FileOutputStream fos;
