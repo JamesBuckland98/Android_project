@@ -36,14 +36,16 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_league_outer);
+        SharedPreferences pref1 = getSharedPreferences("High contrast", 0);
+        ThemeSetting leagueSetting = new ThemeSetting(pref1,LeagueActivity.this);
+        leagueSetting.setHighContrast(R.layout.activity_league_outer);
         String league = this.getIntent().getStringExtra("league");
         toolbar = findViewById(R.id.my_toolbar);
         if (league != null) {
             toolbar.setTitle(league);
         }
 
-        SharedPreferences pref1 = getSharedPreferences("High contrast", 0);
+
 
 
         if (league.equals("Premier League")) {

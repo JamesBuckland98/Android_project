@@ -4,14 +4,12 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.widget.CheckBox;
 
 import com.example.c1733667.team10_football_app.activities.Achievement;
 import com.example.c1733667.team10_football_app.activities.HelpActivity;
 import com.example.c1733667.team10_football_app.activities.InfoActivity;
 import com.example.c1733667.team10_football_app.activities.MainActivity;
 import com.example.c1733667.team10_football_app.activities.MapsActivity;
-import com.example.c1733667.team10_football_app.activities.PremierLeague;
 import com.example.c1733667.team10_football_app.activities.Score;
 import com.example.c1733667.team10_football_app.activities.StadiumActivity;
 
@@ -20,13 +18,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.provider.Settings.System.getString;
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.actionWithAssertions;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.swipeRight;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isChecked;
 import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;

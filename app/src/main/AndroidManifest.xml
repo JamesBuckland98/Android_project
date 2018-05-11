@@ -19,11 +19,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.StadiumActivity" />
-        <activity android:name=".activities.ChampionshipLeague" />
         <activity android:name=".activities.Score" />
-        <activity android:name=".activities.PremierLeague" />
-        <activity android:name=".activities.LeagueOne" />
-        <activity android:name=".activities.LeagueTwo" />
         <activity android:name=".activities.InfoActivity" />
         <activity android:name=".activities.HelpActivity" />
         <!--
