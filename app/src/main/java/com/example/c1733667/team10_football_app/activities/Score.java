@@ -50,10 +50,10 @@ public class Score extends AppCompatActivity implements AdapterView.OnClickListe
 
         shareButtonListener();
 
-        SharedPreferences championPreference = getSharedPreferences("ChampionPreference", 0);
-        SharedPreferences premierPreference = getSharedPreferences("PremierPreference", 0);
-        SharedPreferences leagueOnePreference = getSharedPreferences("LeagueOnePreference", 0);
-        SharedPreferences leagueTwoPreference = getSharedPreferences("LeagueTwoPreference", 0);
+        SharedPreferences championPreference = getSharedPreferences("championPreference", 0);
+        SharedPreferences premierPreference = getSharedPreferences("premierPreference", 0);
+        SharedPreferences leagueOnePreference = getSharedPreferences("leagueOnePreference", 0);
+        SharedPreferences leagueTwoPreference = getSharedPreferences("leagueTwoPreference", 0);
 
         ScoreSystem scoreSystem = new ScoreSystem(championPreference, premierPreference, leagueOnePreference, leagueTwoPreference);
 

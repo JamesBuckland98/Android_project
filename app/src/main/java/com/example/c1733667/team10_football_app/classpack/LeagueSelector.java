@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.c1733667.team10_football_app.activities.ChampionshipLeague;
+import com.example.c1733667.team10_football_app.activities.LeagueActivity;
 import com.example.c1733667.team10_football_app.activities.LeagueOne;
 import com.example.c1733667.team10_football_app.activities.LeagueTwo;
 import com.example.c1733667.team10_football_app.activities.PremierLeague;
@@ -33,19 +34,23 @@ public class LeagueSelector extends AppCompatActivity {
     public void selectLeague(int position, Context context) {
         switch (position) {
             case 0:
-                intent = new Intent(context, PremierLeague.class);
+                intent = new Intent(context, LeagueActivity.class);
+                intent.putExtra("league","Premier League");
                 context.startActivity(intent);
                 break;
             case 1:
-                intent = new Intent(context, ChampionshipLeague.class);
+                intent = new Intent(context, LeagueActivity.class);
+                intent.putExtra("league","Champion League");
                 context.startActivity(intent);
                 break;
             case 2:
-                intent = new Intent(context, LeagueOne.class);
+                intent = new Intent(context, LeagueActivity.class);
+                intent.putExtra("league","League One");
                 context.startActivity(intent);
                 break;
             case 3:
-                intent = new Intent(context, LeagueTwo.class);
+                intent = new Intent(context, LeagueActivity.class);
+                intent.putExtra("league","League Two");
                 context.startActivity(intent);
                 break;
         }
