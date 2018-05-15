@@ -94,7 +94,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void getClubInfo() {
+    private void getClubInfo() {
         Resources res = getResources();
         InputStream is = res.openRawResource(R.raw.clubs);
         Scanner scanner = new Scanner(is);

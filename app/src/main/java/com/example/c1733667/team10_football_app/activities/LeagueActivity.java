@@ -46,24 +46,7 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
         }
 
 
-
-
-        if (league.equals("Premier League")) {
-            leagueArray = getResources().getStringArray(R.array.PremierLeagueTeams);
-            sharedPreferences = getSharedPreferences("premierPreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("Champion League")) {
-            leagueArray = getResources().getStringArray(R.array.EFLC);
-            sharedPreferences = getSharedPreferences("championPreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("League One")) {
-            leagueArray = getResources().getStringArray(R.array.EFL1);
-            sharedPreferences = getSharedPreferences("leagueOnePreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("League Two")) {
-            leagueArray = getResources().getStringArray(R.array.EFL2);
-            sharedPreferences = getSharedPreferences("leagueTwoPreference", Context.MODE_PRIVATE);
-        }
+        LeagueType(league);
 
         ArrayAdapter<String> leagueAdapter;
         leagueAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, leagueArray);
@@ -98,6 +81,28 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
                 return false;
             }
         });
+    }
+
+    private void LeagueType(String league) {
+        if (league != null) {
+            toolbar.setTitle(league);
+        }
+        if (league.equals("Premier League")) {
+            leagueArray = getResources().getStringArray(R.array.PremierLeagueTeams);
+            sharedPreferences = getSharedPreferences("premierPreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("Champion League")) {
+            leagueArray = getResources().getStringArray(R.array.EFLC);
+            sharedPreferences = getSharedPreferences("championPreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("League One")) {
+            leagueArray = getResources().getStringArray(R.array.EFL1);
+            sharedPreferences = getSharedPreferences("leagueOnePreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("League Two")) {
+            leagueArray = getResources().getStringArray(R.array.EFL2);
+            sharedPreferences = getSharedPreferences("leagueTwoPreference", Context.MODE_PRIVATE);
+        }
     }
 
     @Override
