@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.c1733667.team10_football_app">
 
     <!--
@@ -8,7 +9,10 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -16,14 +20,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_football"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="ExtraText">
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.StadiumActivity" />
-        <activity android:name=".activities.ChampionshipLeague" />
         <activity android:name=".activities.Score" />
-        <activity android:name=".activities.PremierLeague" />
-        <activity android:name=".activities.LeagueOne" />
-        <activity android:name=".activities.LeagueTwo" />
         <activity android:name=".activities.InfoActivity" />
         <activity android:name=".activities.HelpActivity" />
         <!--
@@ -46,6 +47,8 @@
 
         <service
             android:name=".classpack.NotificationService"
+            android:exported="false">
+        </service>
             android:exported="false" />
 
         <receiver android:name=".classpack.BootReceiver">
@@ -59,10 +62,20 @@
         <activity android:name=".activities.SplashPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.c1733667.team10_football_app.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
         <activity android:name=".activities.LeagueActivity"></activity>
     </application>
 

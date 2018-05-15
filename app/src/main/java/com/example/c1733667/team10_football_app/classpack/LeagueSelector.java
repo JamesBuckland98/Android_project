@@ -4,11 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.c1733667.team10_football_app.activities.ChampionshipLeague;
 import com.example.c1733667.team10_football_app.activities.LeagueActivity;
-import com.example.c1733667.team10_football_app.activities.LeagueOne;
-import com.example.c1733667.team10_football_app.activities.LeagueTwo;
-import com.example.c1733667.team10_football_app.activities.PremierLeague;
 
 /**
  * Created by c1733667 on 16/04/2018.

@@ -90,27 +90,6 @@ public class SettingActivity extends AppCompatActivity implements NavigationView
                 .getBoolean(String.valueOf(R.id.largecheckbox),
                         false));
 
-//        Map map = pref1.getAll();
-//        if (map.size() > 0) {
-//            for (Object key : map.keySet()) {
-//                if (map.get(String.valueOf(R.id.highContrast)) != null
-//                        && map.get(String.valueOf(R.id.highContrast)).equals(true)) {
-//                    highContrastTitle.setBackgroundColor(Color.BLUE);
-//                    textSize.setBackgroundColor(Color.BLUE);
-//                    HighContrastcheckBox.setBackgroundColor(Color.BLUE);
-//                    smallTextCheckBox.setBackgroundColor(Color.BLUE);
-//                    mediumTextCheckBox.setBackgroundColor(Color.BLUE);
-//                    largeTextCheckBox.setBackgroundColor(Color.BLUE);
-//                } else {
-//                    highContrastTitle.setBackgroundColor(Color.WHITE);
-//                    textSize.setBackgroundColor(Color.WHITE);
-//                    HighContrastcheckBox.setBackgroundColor(Color.WHITE);
-//                    smallTextCheckBox.setBackgroundColor(Color.WHITE);
-//                    mediumTextCheckBox.setBackgroundColor(Color.WHITE);
-//                    largeTextCheckBox.setBackgroundColor(Color.WHITE);
-//                }
-//            }
-//        }
         ThemeSetting highContrastSetting = new ThemeSetting(pref1,SettingActivity.this);
         highContrastSetting.setTextviewContrast(highContrastTitle);
 

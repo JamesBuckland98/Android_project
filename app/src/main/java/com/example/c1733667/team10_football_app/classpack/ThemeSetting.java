@@ -1,19 +1,13 @@
 package com.example.c1733667.team10_football_app.classpack;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ListViewCompat;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-
 import com.example.c1733667.team10_football_app.R;
-import com.example.c1733667.team10_football_app.activities.MainActivity;
-
 import java.util.Map;
 
 /**
@@ -21,6 +15,7 @@ import java.util.Map;
  */
 
 public class ThemeSetting {
+
     private SharedPreferences sharedPreferences;
     private AppCompatActivity activity;
 

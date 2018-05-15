@@ -36,32 +36,13 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_league_outer);
+        SharedPreferences pref1 = getSharedPreferences("High contrast", 0);
+        ThemeSetting leagueSetting = new ThemeSetting(pref1,LeagueActivity.this);
+        leagueSetting.setHighContrast(R.layout.activity_league_outer);
         String league = this.getIntent().getStringExtra("league");
         toolbar = findViewById(R.id.my_toolbar);
-        if (league != null) {
-            toolbar.setTitle(league);
-        }
 
-        SharedPreferences pref1 = getSharedPreferences("High contrast", 0);
-
-
-        if (league.equals("Premier League")) {
-            leagueArray = getResources().getStringArray(R.array.PremierLeagueTeams);
-            sharedPreferences = getSharedPreferences("premierPreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("Champion League")) {
-            leagueArray = getResources().getStringArray(R.array.EFLC);
-            sharedPreferences = getSharedPreferences("championPreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("League One")) {
-            leagueArray = getResources().getStringArray(R.array.EFL1);
-            sharedPreferences = getSharedPreferences("leagueOnePreference", Context.MODE_PRIVATE);
-        }
-        if (league.equals("League Two")) {
-            leagueArray = getResources().getStringArray(R.array.EFL2);
-            sharedPreferences = getSharedPreferences("leagueTwoPreference", Context.MODE_PRIVATE);
-        }
+        LeagueType(league);
 
         ArrayAdapter<String> leagueAdapter;
         leagueAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, leagueArray);
@@ -96,6 +77,28 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
                 return false;
             }
         });
+    }
+
+    private void LeagueType(String league) {
+        if (league != null) {
+            toolbar.setTitle(league);
+        }
+        if (league.equals("Premier League")) {
+            leagueArray = getResources().getStringArray(R.array.PremierLeagueTeams);
+            sharedPreferences = getSharedPreferences("premierPreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("Champion League")) {
+            leagueArray = getResources().getStringArray(R.array.EFLC);
+            sharedPreferences = getSharedPreferences("championPreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("League One")) {
+            leagueArray = getResources().getStringArray(R.array.EFL1);
+            sharedPreferences = getSharedPreferences("leagueOnePreference", Context.MODE_PRIVATE);
+        }
+        if (league.equals("League Two")) {
+            leagueArray = getResources().getStringArray(R.array.EFL2);
+            sharedPreferences = getSharedPreferences("leagueTwoPreference", Context.MODE_PRIVATE);
+        }
     }
 
     @Override
