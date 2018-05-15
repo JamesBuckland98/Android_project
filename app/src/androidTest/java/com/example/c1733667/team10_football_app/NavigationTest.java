@@ -7,6 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import com.example.c1733667.team10_football_app.activities.Achievement;
 import com.example.c1733667.team10_football_app.activities.HelpActivity;
 import com.example.c1733667.team10_football_app.activities.InfoActivity;
+import com.example.c1733667.team10_football_app.activities.LeagueActivity;
 import com.example.c1733667.team10_football_app.activities.MainActivity;
 import com.example.c1733667.team10_football_app.activities.MapsActivity;
 import com.example.c1733667.team10_football_app.activities.Score;
@@ -62,6 +63,12 @@ public class NavigationTest {
             = new ActivityTestRule<HelpActivity>(HelpActivity.class);
     private HelpActivity helpActivity = null;
 
+<<<<<<< HEAD
+=======
+    public ActivityTestRule<LeagueActivity> premierLeagueActivityTestRule
+            = new ActivityTestRule<LeagueActivity>(LeagueActivity.class);
+    private LeagueActivity premierLeague = null;
+>>>>>>> e8c80046fe605909ba7119935eaff974f29176d3
 
     public ActivityTestRule<InfoActivity> infoActivityActivityTestRule
             = new ActivityTestRule<InfoActivity>(InfoActivity.class);

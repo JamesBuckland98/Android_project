@@ -63,6 +63,12 @@ public class ListViewTests {
             = new ActivityTestRule<HelpActivity>(HelpActivity.class);
     private HelpActivity helpActivity = null;
 
+<<<<<<< HEAD
+=======
+    public ActivityTestRule<LeagueActivity> premierLeagueActivityTestRule
+            = new ActivityTestRule<LeagueActivity>(LeagueActivity.class);
+    private LeagueActivity premierLeague = null;
+>>>>>>> e8c80046fe605909ba7119935eaff974f29176d3
 
     public ActivityTestRule<InfoActivity> infoActivityActivityTestRule
             = new ActivityTestRule<InfoActivity>(InfoActivity.class);

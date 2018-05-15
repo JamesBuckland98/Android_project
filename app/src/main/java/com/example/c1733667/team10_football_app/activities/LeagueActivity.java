@@ -41,6 +41,14 @@ public class LeagueActivity extends AppCompatActivity implements NavigationView.
         leagueSetting.setHighContrast(R.layout.activity_league_outer);
         String league = this.getIntent().getStringExtra("league");
         toolbar = findViewById(R.id.my_toolbar);
+<<<<<<< HEAD
+=======
+        if (league != null) {
+            toolbar.setTitle(league);
+        }
+
+
+>>>>>>> e8c80046fe605909ba7119935eaff974f29176d3
 
         LeagueType(league);
 

@@ -27,6 +27,9 @@
         <activity android:name=".activities.Score" />
         <activity android:name=".activities.InfoActivity" />
         <activity android:name=".activities.HelpActivity" />
+        <activity android:name=".activities.TestActivity">
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
