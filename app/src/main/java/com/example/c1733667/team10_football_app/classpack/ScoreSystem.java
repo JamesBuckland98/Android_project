@@ -51,7 +51,7 @@ public class ScoreSystem {
         return total;
     }
 
-    // this methods calculates the total percentage of stadiums visisted.
+    // this methods calculates the total percentage of stadiums visited.
     public long calculateTotalPercentage(int totalStadiumsVisited){
 
         long totalPerc = (long) Math.floor(100 * totalStadiumsVisited);

@@ -2,11 +2,8 @@ package com.example.c1733667.team10_football_app.classpack;
 
 import android.animation.ObjectAnimator;
 import android.util.Log;
-import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
-
-import com.example.c1733667.team10_football_app.R;
 
 /**
  * Created by c1733667 on 12/04/2018.
@@ -35,24 +32,27 @@ public class AchievementClass {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return name;
     }
 
     public Integer getTargetNumber() {
         return targetNumber;
     }
 
-    public void setTargetNumber(Integer targetNumber) {
+    public int setTargetNumber(Integer targetNumber) {
         this.targetNumber = targetNumber;
+        return targetNumber;
     }
 
     public Integer getActualNumber() {
         return actualNumber;
     }
 
-    public void setActualNumber(Integer actualNumber) {
+    public int setActualNumber(Integer actualNumber) {
         this.actualNumber = actualNumber;
+        return actualNumber;
     }
 
     public void createProgessBar(ProgressBar progressBar){

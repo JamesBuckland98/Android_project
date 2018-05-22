@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.c1733667.team10_football_app">
 
     <!--
@@ -19,17 +20,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_football"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity"/>
-
+        android:theme="@style/AppTheme"
+        tools:ignore="ExtraText">
+        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.StadiumActivity" />
-        <activity android:name=".activities.ChampionshipLeague" />
         <activity android:name=".activities.Score" />
-        <activity android:name=".activities.PremierLeague" />
-        <activity android:name=".activities.LeagueOne" />
-        <activity android:name=".activities.LeagueTwo" />
         <activity android:name=".activities.InfoActivity" />
         <activity android:name=".activities.HelpActivity" />
+        <activity android:name=".activities.TestActivity">
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -52,6 +52,7 @@
             android:name=".classpack.NotificationService"
             android:exported="false">
         </service>
+            android:exported="false" />
 
         <receiver android:name=".classpack.BootReceiver">
             <intent-filter>
@@ -78,6 +79,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
         </provider>
+        <activity android:name=".activities.LeagueActivity"></activity>
     </application>
 
 </manifest>

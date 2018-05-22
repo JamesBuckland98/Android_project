@@ -8,8 +8,10 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -97,15 +99,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setTheme(R.style.HighContrastTheme);
-        //setContentView(R.layout.activity_maps_outer);
-
-//        setContentView(R.layout.activity_maps_outer);
         SharedPreferences pref = getSharedPreferences("High contrast", 0);
         ThemeSetting highcontrastmode = new ThemeSetting(pref,MapsActivity.this);
         highcontrastmode.setHighContrast(R.layout.activity_maps_outer);
-
-
 
         visitedClubs = new ArrayList<>();
         clubName = new ArrayList<>();
@@ -119,10 +115,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         this.navView = findViewById(R.id.nav_view);
         this.navView.setNavigationItemSelectedListener(this);
 
-        pref1 = getSharedPreferences("ChampionPreference", 0);
-        pref2 = getSharedPreferences("PremierPreference", 0);
-        pref3 = getSharedPreferences("LeagueOnePreference", 0);
-        pref4 = getSharedPreferences("LeagueTwoPreference", 0);
+        pref1 = getSharedPreferences("championPreference", 0);
+        pref2 = getSharedPreferences("premierPreference", 0);
+        pref3 = getSharedPreferences("leagueOnePreference", 0);
+        pref4 = getSharedPreferences("leagueTwoPreference", 0);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -183,6 +179,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.FROYO)
         public void saveBitmap(Bitmap bitmap) {
             imagePath = new File(this.getExternalFilesDir(null) + "/screenshot.png");
             FileOutputStream fos;

@@ -120,10 +120,10 @@ public class AchievemntInfo extends AppCompatActivity implements NavigationView.
             }
         });
 
-        SharedPreferences pref1 = getSharedPreferences("ChampionPreference", 0);
-        SharedPreferences pref2 = getSharedPreferences("PremierPreference", 0);
-        SharedPreferences pref3 = getSharedPreferences("LeagueOnePreference", 0);
-        SharedPreferences pref4 = getSharedPreferences("LeagueTwoPreference", 0);
+        SharedPreferences pref1 = getSharedPreferences("championPreference", 0);
+        SharedPreferences pref2 = getSharedPreferences("premierPreference", 0);
+        SharedPreferences pref3 = getSharedPreferences("leagueOnePreference", 0);
+        SharedPreferences pref4 = getSharedPreferences("leagueTwoPreference", 0);
 
         Map map = pref1.getAll();
         Iterator iterator = map.keySet().iterator();
